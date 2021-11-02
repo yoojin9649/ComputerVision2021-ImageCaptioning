@@ -90,3 +90,14 @@ splits 는 'train', 'restval', 'val', 'test'로 이루어져 있으며 'train', 
 - Deep visual-semantic alignments for generating image descriptions.
 
   베이스라인과 다르게 기존의 이미지 캡셔닝 모델은 LSTM을 사용했습니다. 위 논문이 대표적으로 LSTM 기반 이미지 캡셔닝 모델을 사용했습니다.
+  
+  
+  
+### 제출 파일 형식
+
+제출할 파일의 확장자는 `.json` 입니다. 제출할 파일의 형식은 다음과 같고 형식을 맞춰줘야 평가가 가능합니다.
+
+```
+[{"image_id": 391895, "caption": "a man is standing on a bike in the woods"}, {"image_id": 60623, "caption": "a woman is eating a piece of cake"},
+...]
+```
