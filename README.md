@@ -101,3 +101,7 @@ splits 는 'train', 'restval', 'val', 'test'로 이루어져 있으며 'train', 
 [{"image_id": 391895, "caption": "a man is standing on a bike in the woods"}, {"image_id": 60623, "caption": "a woman is eating a piece of cake"},
 ...]
 ```
+
+
+### 평가지표
+이미지 캡셔닝에서 자주 사용하는 평가지표로 **Bleu_1, Bleu_2, Bleu_3, Bleu_4, METEOR, ROUGE_L, CIDEr, SPICE** 를 사용합니다. 점수가 높을수록 성능이 좋다는 것을 의미합니다.
