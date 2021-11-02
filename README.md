@@ -1,4 +1,4 @@
-### 개요
+## 개요
 
 본 챌린지는 Vision-Language Task 중에서 이미지 캡셔닝을 수행하는 챌린지입니다. 이미지 캡셔닝은 아래와 같이 이미지의 내용을 설명하는 문장을 생성하는 작업입니다. 
 
@@ -8,7 +8,7 @@
 
 
 
-### 데이터셋
+## 데이터셋
 
 이미지 캡셔닝에서 사용하는 데이터셋은 이미지와 텍스트로 이루어져있고 보통 한 이미지에 대해 5개의 문장으로 구성되어 있습니다. 아래는 MSCOCO 데이터의 예시이며 여기서는 이미지 당 한 문장씩 보여줍니다.
 
@@ -65,7 +65,7 @@ splits 는 'train', 'restval', 'val', 'test'로 이루어져 있으며 'train', 
 
 
 
-### 베이스라인
+## 베이스라인
 
 본 챌린지에서 사용한 베이스 라인 방법론은 Convolutional Image Captioning 논문입니다.
 
@@ -73,7 +73,7 @@ splits 는 'train', 'restval', 'val', 'test'로 이루어져 있으며 'train', 
 
 
 
-### 동영상
+## 동영상
 
 챌린지 설명, 논문의 방법론, 베이스라인 코드 설명하는 영상의 주소는 다음과 같습니다.
 
@@ -81,7 +81,7 @@ splits 는 'train', 'restval', 'val', 'test'로 이루어져 있으며 'train', 
 
 
 
-### 추천하는 논문
+## 추천하는 논문
 
 - Convolutional sequence to sequence learning.
 
@@ -93,7 +93,8 @@ splits 는 'train', 'restval', 'val', 'test'로 이루어져 있으며 'train', 
   
   
   
-### 제출 파일 형식
+  
+## 제출 파일 형식
 
 제출할 파일의 확장자는 `.json` 입니다. 제출할 파일의 형식은 다음과 같고 형식을 맞춰줘야 평가가 가능합니다.
 
@@ -103,5 +104,6 @@ splits 는 'train', 'restval', 'val', 'test'로 이루어져 있으며 'train', 
 ```
 
 
-### 평가지표
+
+## 평가지표
 이미지 캡셔닝에서 자주 사용하는 평가지표로 **Bleu_1, Bleu_2, Bleu_3, Bleu_4, METEOR, ROUGE_L, CIDEr, SPICE** 를 사용합니다. 점수가 높을수록 성능이 좋다는 것을 의미합니다.
