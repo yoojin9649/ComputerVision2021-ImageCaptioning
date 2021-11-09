@@ -101,6 +101,17 @@ Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니�
 
 - coco_loader.py의 코드를 바꿔줍니다.
   `words = str(caption).lower().translate(None, string.punctuation).strip().split()` 코드를 `words = str(caption).lower().translate(str.maketrans('', '', string.punctuation)).strip().split()` 로 바꿔줍니다.
+  
+  
+- evaluate.py에서 `preds_filt = [p for p in preds if p['image_id'] in valids]` 코드 이후에 아래의 코드를 추가합니다.
+```
+  len_p = len(preds_filt)
+  for i in range(len_p):
+    preds_filt[i]['image_id'] = int(preds_filt[i]['image_id'])
+ ```
+아래 사진은 코드를 추가한 모습입니다.
+![image](https://user-images.githubusercontent.com/59722489/140848055-497adf89-ea6b-4efe-8109-1ef08fb33de0.png)
+
 
 
 8. 제가 올린 2개의 파일을 살펴봅니다.
