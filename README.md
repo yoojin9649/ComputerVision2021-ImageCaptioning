@@ -83,6 +83,19 @@ Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니�
 
 ![image](https://user-images.githubusercontent.com/59722489/140840343-52c3f9b0-29f8-4b90-9d16-22f7fa5afa94.png)
 
+- [MSCOCO](http://images.cocodataset.org/annotations/annotations_trainval2014.zip) 웹페이지에서 _2014 Train/Val annotations [241MB]_ 를 다운 받습니다.
+
+![image](https://user-images.githubusercontent.com/59722489/140843939-23ea5a62-ac48-419a-b371-d37a36fd3452.png)
+
+다운 받은 후 아래와 같이 폴더에 압축을 풀어줍니다.
+
+![image](https://user-images.githubusercontent.com/59722489/140844151-5e52837e-88f7-4183-9ec5-6b5b4937a1a4.png)
+
+`annotations` 폴더의 내부 모습은 다음과 같습니다.
+
+![image](https://user-images.githubusercontent.com/59722489/140844203-d03b8326-0c2f-420c-afe0-f05f6b2ab66c.png)
+
+
 
 7. 코드를 또 수정합니다.
 
