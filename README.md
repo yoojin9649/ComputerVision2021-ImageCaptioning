@@ -98,24 +98,42 @@ Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니�
 
 9. 테스트 결과를 살펴봅니다.
 ![image1](https://user-images.githubusercontent.com/59722489/140758437-0520130b-7a32-44b2-84db-b14bf9b4a375.jpg)
+
 a group of people standing on top of a mountain
+
 ![image2](https://user-images.githubusercontent.com/59722489/140758440-27c8558d-1579-427b-8829-e7a9165763c0.jpg)
+
 a cat sitting on a ground next to a dead tree
+
 ![image3](https://user-images.githubusercontent.com/59722489/140758444-fd4d78cc-cfb3-4d99-ba74-047270ebaa47.jpg)
+
 a group of people sitting around a table with a laptop
+
 ![image4](https://user-images.githubusercontent.com/59722489/140758446-aff3c8f4-9d6f-45a6-be20-edb3eeb5ac8a.jpg)
+
 a large building with a large building in the background
+
 ![image5](https://user-images.githubusercontent.com/59722489/140758452-e0054f52-2e05-447a-872d-f2947ec55539.jpg)
 a plate of food with a fork and a fork
+
 ![image6](https://user-images.githubusercontent.com/59722489/140758454-9fbde970-7f74-424b-9b89-b1f1265ae42c.jpg)
+
 a table with a bunch of different types of items
+
 ![image7](https://user-images.githubusercontent.com/59722489/140758456-2e746a79-f56f-400d-9930-8a446710d065.jpg)
+
 a busy city street with cars and cars
+
 ![image8](https://user-images.githubusercontent.com/59722489/140758459-0dc9159b-34d2-4335-aabf-003c2e900355.jpg)
+
 two brown bears are sitting on a tree
+
 ![image9](https://user-images.githubusercontent.com/59722489/140758460-e7aa8aab-620e-40f4-a217-2be36c1fb22f.jpg)
+
 a man is standing next to a large elephant
+
 ![image10](https://user-images.githubusercontent.com/59722489/140758462-1e09364f-a518-48d9-8966-65e7a9a7a856.jpg)
+
 a man is standing next to a large elephant
 
 
