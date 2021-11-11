@@ -32,13 +32,11 @@ conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11
 - 기타 라이브러리
 
 ```
-pip install matplotlib scikit-image tqdm numpy Pillow
+pip install cython matplotlib scikit-image tqdm numpy Pillow
 pip install jupyter
-pip install pycocotools-windows
-pip install pycocoevalcap
+pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+pip install "git+https://github.com/salaniz/pycocoevalcap.git"
 ```
-
-> - 저는 `pip install pycocoevalcap` 명령어로 설치가 안 되어서 `pip3 install pycocoevalcap --user` 로 설치했습니다.
 > - 저는 Terminal 창에서 실행하지 않고 jupyter notebook에서 실행했기 때문에 jupyter도 함께 설치했습니다.
 
 
