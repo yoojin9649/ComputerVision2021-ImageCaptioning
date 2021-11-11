@@ -65,7 +65,7 @@
      ![image-20211111110716013](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111110716013.png)
 
 7. 결과를 저장하기 위한 `output` 폴더를 생성합니다.
-        ![image-20211111103653229](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111103653229.png)
+       ![image-20211111103653229](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111103653229.png)
 
 8. third_party 안에 coco-caption이라는 폴더가 있습니다.
    ![image-20211111111709154](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111111709154.png)
@@ -124,6 +124,8 @@
       아래 사진은 코드를 추가한 모습입니다.
       ![image-20211111112935204](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111112935204.png)
 
+    - `evaluate.py` 에서 `annFile = 'third_party/coco-caption/annotations/captions_val2014.json'` 코드를 `annFile = 'third_party/coco_caption/annotations/captions_val2014.json'` 로 변경합니다.
+
 11. `third_party/coco_caption` 폴더 안의 `get_standford_models.sh`를 더블클릭합니다.
     ![image-20211111113039608](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111113039608.png)
 
@@ -135,6 +137,7 @@
 
 - `convcap train&test (ComputerVision).ipynb` : coco 데이터 셋에 대해 훈련하고 테스트하는 파일입니다. 환경만 잘 설정하셨다면 실행할 때 문제는 없을 것입니다.
 - `convcap new image test (ComputerVision).ipynb` : 훈련한 모델을 새로운 이미지를 사용해 테스트하는 파일입니다. 저는 `my_image` 폴더를 생성하여 10개의 이미지에 대해 테스트를 진행했습니다.
+
 
 
 13. 테스트 결과를 살펴봅니다.
