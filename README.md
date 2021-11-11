@@ -2,145 +2,95 @@
 
 ## 환경 설정
 
-1. 해당 [github](https://github.com/aditya12agd5/convcap) 에서 **Download ZIP**을 클릭하여 다운 받은 후 압축을 풉니다.
-   ![image-20211108172604868](https://github.com/yoojin9649/ComputerVision2021-ImageCaptioning/raw/main/imgs/image-20211108172604868.png)
+## 환경 설정
 
-![image-20211111102018406](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111102018406.png)
+1. 해당 [github](https://github.com/aditya12agd5/convcap) 에서 **Download ZIP**을 클릭하여 다운 받은 후 압축을 풉니다.
+
+![image-20211108172604868](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108172604868.png)
+
+![image-20211108173318282](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108173318282.png)
+
+
 
 2. 코드 실행을 위한 가상환경을 만들어 줍니다.
 
-   ```
-   conda create -n convcap_test python=3.8
-   conda activate convcap_test
-   ```
+```
+conda create -n convcap python=3.8
+conda activate convcap
+```
+
+
 
 3. 필요한 라이브러리를 설치해 줍니다.
 
-   - torch 설치: https://pytorch.kr/get-started/previous-versions/
+- torch 설치: https://pytorch.kr/get-started/previous-versions/
 
-     ```
-     conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
-     ```
+```
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+```
 
-   - 기타 라이브러리
+- 기타 라이브러리
 
-     ```
-     pip install cython matplotlib scikit-image tqdm numpy Pillow
-     pip install jupyter
-     ```
+```
+pip install matplotlib scikit-image tqdm numpy Pillow
+pip install jupyter
+pip install pycocotools-windows
+pip install pycocoevalcap
+```
+
+> - 저는 `pip install pycocoevalcap` 명령어로 설치가 안 되어서 `pip3 install pycocoevalcap --user` 로 설치했습니다.
+> - 저는 Terminal 창에서 실행하지 않고 jupyter notebook에서 실행했기 때문에 jupyter도 함께 설치했습니다.
+
+
 
 4. 본 코드는 Python2.7에서 돌아가므로 Python3 이상에서 사용하려면 고쳐야 하는 부분이 있습니다.
 
-   - evaluate.py `print 'Using %d/%d predictions' % (len(preds_filt), len(preds))` 코드를 `print('Using %d/%d predictions' % (len(preds_filt), len(preds)))` 로 변경합니다.
+- evaluate.py
+  `print 'Using %d/%d predictions' % (len(preds_filt), len(preds))` 코드를 `print('Using %d/%d predictions' % (len(preds_filt), len(preds)))` 로 변경합니다.
+
+
 
 5. 아래 명령어를 Terminal 창에서 실행해 데이터를 train/val/test 로 나눠줍니다.
 
-   ```
-   bash scripts/fetch_splits.sh
-   ```
+```
+bash scripts/fetch_splits.sh
+```
 
-   `scripts/fetch_splits.sh` 를 확인하면 아래와 같이 `caption_datasets.zip` 를 받아와 data 폴더에 이동시켜 주는 것을 확인할 수 있습니다.
+`scripts/fetch_splits.sh` 를 확인하면 아래와 같이 `caption_datasets.zip` 를 받아와 data 폴더에 이동시켜 주는 것을 확인할 수 있습니다.
 
-   ```
-   wget http://cs.stanford.edu/people/karpathy/deepimagesent/caption_datasets.zip
-   unzip caption_datasets.zip
-   mv dataset_* ./data/
-   rm caption_datasets.zip
-   ```
+```
+wget http://cs.stanford.edu/people/karpathy/deepimagesent/caption_datasets.zip
+unzip caption_datasets.zip
+mv dataset_* ./data/
+rm caption_datasets.zip
+```
 
-   Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니다.
+Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니다.
 
-   ![image-20211111102845133](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111102845133.png)
+![image-20211108215314334](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108215314334.png)
 
-   `data` 폴더 내부에 다음과 같은 파일들이 생긴 것을 알 수 있습니다.
 
-   ![image-20211111102955043](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111102955043.png)
 
 6. train2014, val2014 이미지 데이터를 [MSCOCO](http://cocodataset.org/#download) 웹페이지에서 다운받아 `./data/coco` 에 저장합니다.
 
-   - 이미지 데이터를 `./data/coco` 에 저장하기 전 폴더의 모습
-     ![image-20211111102955043](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111102955043.png)
+- 이미지 데이터를 `./data/coco` 에 저장하기 전 폴더의 모습
 
-   - 이미지 데이터를 `./data/coco` 에 저장하여 압축을 푼 후 폴더의 모습
-     ![image-20211111110716013](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111110716013.png)
+![image-20211108215529439](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108215529439.png)
 
-7. 결과를 저장하기 위한 `output` 폴더를 생성합니다.
-       ![image-20211111103653229](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111103653229.png)
+- 이미지 데이터를 `./data/coco` 에 저장한 후 폴더의 모습
 
-8. third_party 안에 coco-caption이라는 폴더가 있습니다.
-   ![image-20211111111709154](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111111709154.png)
-
-   `coco-caption` 폴더를 확인해보시면 빈 폴더일 것입니다. 그렇기 때문에 삭제해주시고 link 에 제가 `coco-caption-master.zip` 을 올려놨으니 다운 받으셔서 압축을 풀어주시면 됩니다.
-
-   ![image-20211111112146913](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111112146913.png)
-
-   `coco-caption-master` 폴더의 이름을 `coco_caption` 으로 변경합니다.
-   ![image-20211111112231699](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111112231699.png)
-
-   그리고 `coco_caption` 폴더 안을 보면 annotations 폴더가 있는데 삭제합니다.
-
-   ![image-20211111112325609](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111112325609.png)
-
-   **주의할 점!!**
-
-   여기서 주의할 점은 다음 coco-caption 모듈은 다음 링크 https://github.com/daqingliu/coco-caption 의 조건을 만족해야 합니다. 제가 사용한 결과 python3.6 이상하면 작동하고 java도 깔려있어야 합니다. 위의 링크에서 Requirements를 확인해주세요.
-
-   
-
-   [MSCOCO](http://images.cocodataset.org/annotations/annotations_trainval2014.zip) 웹페이지에서 *2014 Train/Val annotations [241MB]* 를 다운 받아 `third_party/coco_caption` 경로 안에 넣고 압축을 풀어줍니다.
-
-   - *2014 Train/Val annotations [241MB]* 클릭
-     ![image](https://user-images.githubusercontent.com/59722489/140843939-23ea5a62-ac48-419a-b371-d37a36fd3452.png)
-   - 압축 푼 모습
-
-   ![image-20211111112445272](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111112445272.png)
-
-9. evaluate에서 아래 코드를
-
-   ```
-   from pycocotools.coco import COCO
-   from pycocoevalcap.eval import COCOEvalCap
-   ```
-
-   다음 코드로 변경합니다.
-
-   ```
-   from third_party.coco_caption.pycocotools.coco import COCO
-   from third_party.coco_caption.pycocoevalcap.eval import COCOEvalCap
-   ```
-
-10. 코드를 또 수정합니다.
-
-    - coco_loader.py의 코드를 바꿔줍니다. `words = str(caption).lower().translate(None, string.punctuation).strip().split()` 코드를 `words = str(caption).lower().translate(str.maketrans('', '', string.punctuation)).strip().split()` 로 바꿔줍니다.
-
-    - evaluate.py에서 `preds_filt = [p for p in preds if p['image_id'] in valids]` 코드 이후에 아래의 코드를 추가합니다.
-
-      ```
-        len_p = len(preds_filt)
-        for i in range(len_p):
-          preds_filt[i]['image_id'] = int(preds_filt[i]['image_id'])
-      ```
-
-      아래 사진은 코드를 추가한 모습입니다.
-      ![image-20211111112935204](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111112935204.png)
-
-    - `evaluate.py` 에서 `annFile = 'third_party/coco-caption/annotations/captions_val2014.json'` 코드를 `annFile = 'third_party/coco_caption/annotations/captions_val2014.json'` 로 변경합니다.
-
-11. `third_party/coco_caption` 폴더 안의 `get_standford_models.sh`를 더블클릭합니다.
-    ![image-20211111113039608](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111113039608.png)
-
-    ![image-20211111113119521](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211111113119521.png)
-
-    이런식으로 쭉 실행되다가 완료되면 꺼집니다.
-
-12. 제가 올린 2개의 파일을 살펴봅니다.
-
-- `convcap train&test (ComputerVision).ipynb` : coco 데이터 셋에 대해 훈련하고 테스트하는 파일입니다. 환경만 잘 설정하셨다면 실행할 때 문제는 없을 것입니다.
-- `convcap new image test (ComputerVision).ipynb` : 훈련한 모델을 새로운 이미지를 사용해 테스트하는 파일입니다. 저는 `my_image` 폴더를 생성하여 10개의 이미지에 대해 테스트를 진행했습니다.
+![image-20211108222245298](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108222245298.png)
 
 
 
-13. 테스트 결과를 살펴봅니다.
+7. 코드를 또 수정합니다.
+
+- coco_loader.py의 코드를 바꿔줍니다.
+  `words = str(caption).lower().translate(None, string.punctuation).strip().split()` 코드를 `words = str(caption).lower().translate(str.maketrans('', '', string.punctuation)).strip().split()` 로 바꿔줍니다.
+
+
+
+8. 테스트 결과를 살펴봅니다.
 ![image1](https://user-images.githubusercontent.com/59722489/140758437-0520130b-7a32-44b2-84db-b14bf9b4a375.jpg)
 
 a group of people standing on top of a mountain
