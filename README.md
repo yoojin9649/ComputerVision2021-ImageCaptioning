@@ -6,9 +6,9 @@
 
 1. 해당 [github](https://github.com/aditya12agd5/convcap) 에서 **Download ZIP**을 클릭하여 다운 받은 후 압축을 풉니다.
 
-![image-20211108172604868](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108172604868.png)
+![image-20211108172604868](./imgs/image-20211108172604868.png)
 
-![image-20211108173318282](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108173318282.png)
+![image-20211108173318282](./imgs/image-20211108173318282.png)
 
 
 
@@ -67,7 +67,7 @@ rm caption_datasets.zip
 
 Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니다.
 
-![image-20211108215314334](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108215314334.png)
+![image-20211108215314334](./imgs/image-20211108215314334.png)
 
 
 
@@ -75,11 +75,11 @@ Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니�
 
 - 이미지 데이터를 `./data/coco` 에 저장하기 전 폴더의 모습
 
-![image-20211108215529439](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108215529439.png)
+![image-20211108215529439](./imgs/image-20211108215529439.png)
 
 - 이미지 데이터를 `./data/coco` 에 저장한 후 폴더의 모습
 
-![image-20211108222245298](C:\Users\dbwls\AppData\Roaming\Typora\typora-user-images\image-20211108222245298.png)
+![image-20211108222245298](./imgs/image-20211108222245298.png)
 
 
 
