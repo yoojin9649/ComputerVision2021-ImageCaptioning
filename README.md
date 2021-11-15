@@ -24,6 +24,8 @@ conda activate convcap
 3. 필요한 라이브러리를 설치해 줍니다.
 
 - torch 설치: https://pytorch.kr/get-started/previous-versions/
+  
+  torch는 자신의 컴퓨터 환경에 맞게 설치해주세요. 저는 cuda 11.4까지 사용 가능해서 다음과 같이 설치를 했습니다.
 
 ```
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
