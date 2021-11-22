@@ -118,6 +118,8 @@ https://drive.google.com/file/d/1zPwVcmmGxu2XD7RlHmhrEQ_vPbjeXILq/view?usp=shari
 - `convcap train&test (ComputerVision).ipynb` : coco 데이터 셋에 대해 훈련하고 테스트하는 파일입니다. 환경만 잘 설정하셨다면 실행할 때 문제는 없을 것입니다.
 - `convcap new image test (ComputerVision).ipynb` : 훈련한 모델을 새로운 이미지를 사용해 테스트하는 파일입니다. 저는 `my_image` 폴더를 생성하여 10개의 이미지에 대해 테스트를 진행했습니다.
 - 저는 터미널 창에서 진행하지 않았고 위와 같이 2개의 주피터 노트북 파일에서 코드를 돌렸습니다.
+- 첫 번째 `convcap train&test (ComputerVision).ipynb` 파일을 돌리면 root 폴더의 output 폴더 내에 result_test.json 파일이 생성됩니다. 이 파일을 제출하시면됩니다.
+- 두 번째 `convcap new image test (ComputerVision).ipynb` 파일은 자신이 원하는 이미지로 훈련된 모델을 테스트 해 볼 수 있습니다. 파일을 보시면 아시겠지만 저는 root 폴더 내에 `my_image` 폴더를 생성하여 거기에 제가 테스트하고 싶은 이미지를 넣었습니다.
 
 
 10. 테스트 결과를 살펴봅니다.
