@@ -95,7 +95,19 @@ Pycharm의 Terminal에서 명령어를 실행한 모습은 다음과 같습니�
 
 
 
-8. 테스트 결과를 살펴봅니다.
+8. annotations 폴더 생성 후 파일 추가
+
+- `third_party` 안에 `annotations` 폴더를 생성합니다.
+
+![image](https://user-images.githubusercontent.com/59722489/142791061-11eeea20-10a4-4789-af43-369ad254f6b6.png)
+
+- 다음 링크에서 `captions_val2014.json` 파일을 다운 받아 `annotations`에 추가합니다.
+
+https://drive.google.com/file/d/1zPwVcmmGxu2XD7RlHmhrEQ_vPbjeXILq/view?usp=sharing
+
+
+
+9. 테스트 결과를 살펴봅니다.
 ![image1](https://user-images.githubusercontent.com/59722489/140758437-0520130b-7a32-44b2-84db-b14bf9b4a375.jpg)
 
 a group of people standing on top of a mountain
