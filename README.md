@@ -52,6 +52,8 @@ pip install "git+https://github.com/salaniz/pycocoevalcap.git"
 bash scripts/fetch_splits.sh
 ```
 
+> - 저는 윈도우 앱 Ubuntu를 설치하였고 Ubuntu 에 unzip도 설치 했던 것 같습니다. 위의 명령어를 실행했을 때 에러가 발생하면 명령어가 없어서 발생했을 가능성이 높습니다.
+
 `scripts/fetch_splits.sh` 를 확인하면 아래와 같이 `caption_datasets.zip` 를 받아와 data 폴더에 이동시켜 주는 것을 확인할 수 있습니다.
 
 ```
